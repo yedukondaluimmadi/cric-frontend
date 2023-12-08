@@ -892,6 +892,9 @@ const ScoreBoard = () => {
         setWicketCount(wicketCount + 1)
         disableAllScoreButtons()
       }
+      if(inningNo === 2 && !isNoBall){
+        setRemainingBalls(remainingBalls-1);
+      }
     }
     if (isRunOut) {
       if (batter1.id === playerId) {
